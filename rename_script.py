@@ -9,9 +9,9 @@ for i in range(1, 41):
         # Iterate over all files in the folder
         for filename in os.listdir(folder_path):
             # Check if the filename contains the redundant "npy"
-            if "npy" in filename:
+            if "." == filename[-1]:
                 # Create the new filename by removing the redundant "npy"
-                new_filename = filename.replace("npy", "")
+                new_filename = filename + "npy"
                 
                 # Get the full path to the old and new filenames
                 old_file = os.path.join(folder_path, filename)
